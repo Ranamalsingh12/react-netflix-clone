@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
 // import ReactPlayer from 'react-player';
 import PlayBtn from '../assets/images/playbtn.svg'
-import MuteBtn from '../assets/images/mute-icon.svg';
-import UnMuteBtn from '../assets/images/unmute-icon.svg';
+// import MuteBtn from '../assets/images/mute-icon.svg';
+// import UnMuteBtn from '../assets/images/unmute-icon.svg';
 import AddList from '../assets/images/add-icon.svg';
+import '../assets/Css/Header.css';
 
 const Header = () => {
 
-    const [muted, setMuted] = useState(true)
+    const [muted, setMuted] = useState(true);
+
+    function truncate(string, n) {
+        return string?.length > n ? string.substr(0, n-1) + '...' : string
+    }
 
   return (
     <div className="header_main" style={{
@@ -29,23 +34,23 @@ const Header = () => {
       /> */}
 
       <div className="header_content">
-        <h1 className='header_content-name'>Narcos</h1>
-        <p className='header__container-overview'>A gritty chronicle of the war against Colombia's infamously violent and powerful drug cartels.</p>
+        <h1 className='header_content_name'>Narcos</h1>
         <button
             onClick={() => alert('not a movie!')}
             className='header_content_PlayBtn'
         >
-            <img src={PlayBtn} className='header_content_PlayBtn-btnplay' alt="" />
+            {/* <img src={PlayBtn} className='header_content_PlayBtn_btnplay' alt="" /> */}
             Play
         </button>
         <button
-            className='header_content_myListBtn'
+            className='header_content_PlayBtn'
         >
-            <img src={AddList} className='header_content_PlayBtn-btnplay' alt="" />
+            {/* <img src={AddList} className='header_content_PlayBtn_btnplay' alt="" /> */}
             My List
         </button>
+        <p className='header__container_overview'>{truncate(` A gritty chronicle of the war against Colombia's infamously violent and powerful drug cartels.`,150)}</p>
             
-        {muted ? (
+        {/* {muted ? (
         <button onClick={() => setMuted(false)} className='header_content_volBtn'>
             <img src={MuteBtn} alt="" />
         </button>
@@ -53,8 +58,10 @@ const Header = () => {
         <button onClick={() => setMuted(true)} className='header_content_volBtn'>
             <img src={UnMuteBtn} alt="" />
         </button>
-        )}
+        )} */}
       </div>
+
+      <div className="header_content-fade"></div>
 
     </div>
   )
