@@ -1,0 +1,6 @@
+.header_main{
+    position: relative;
+    height: 400vh;
+    color: white;
+    object-fit: contain;
+}

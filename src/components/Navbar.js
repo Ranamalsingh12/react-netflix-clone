@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import { NavLink } from 'react-router-dom';
 import Netflix from '../assets/images/Netflix.svg';
 import SearchLogo from '../assets/images/search-icon.svg';
+import '../assets/Css/Navbar.css';
 
 const Navbar = () => {
+
+  const [show, setShow] = useState(false);
+
+  const transitionNavbar = () => {
+    if(window.scrollY){
+      setShow(true);
+    }else{
+      setShow(false);
+    }
+  }
+  
+  useEffect(() => {
+    // window.addEventListner("scroll", transitionNavbar);
+    return () => {
+      window.removeEventListner("scroll", transitionNavbar)
+    }
+  }, [])
+  
+
+
   return (
-    <nav className='navigationBar'>
+    <nav className={`navigationBar nav ${show &&'nav_black'}`}>
       <div className="navbar_head_left">
         <img
             className='navigation__container__logo'
