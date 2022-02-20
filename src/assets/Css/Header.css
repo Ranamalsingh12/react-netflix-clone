@@ -1,14 +1,15 @@
 .header_main{
     position: relative;
     color: white;
-    height: 80vh;
     object-fit: contain;
+    height: 100vh;
+    margin-bottom: 6rem;
 }
 
 .header_content{
     margin-left: 40px;
     padding-top: 200px;
-    height: 360px;
+    height: 480px;
 }
 
 .header_content_name{
@@ -49,6 +50,10 @@
     padding-top: .5rem;
     padding-bottom: .5rem;
     background-color: rgba(51, 51, 51, 0.5);
+}
+
+.btn-play{
+    background-color: #F44336;
 }
 
 .header_content_PlayBtn:hover {

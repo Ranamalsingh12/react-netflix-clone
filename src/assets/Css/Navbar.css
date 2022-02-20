@@ -18,11 +18,24 @@
     transition: all 0.5s;
 }
 
+.nav_black{
+    background-color: #111;
+}
+
+.nav .navbar_container_links:hover{
+    color: rgb(160, 161, 163);
+}
+
+.links:hover {
+    color: rgb(160, 161, 163);
+}
+
 .navbar_head_right{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 
 .navbar_head_left div{
@@ -46,11 +59,11 @@
 }
 
 .navbar_head_right img{
-    background-color: black;
-    height: 2em;
-    width: 2em;
+    height: 1em;
+    width: 1em;
 }
 
-.nav_black{
-    background-color: #111;
+.navbar_container_links{
+    font-size: 13px;
+    font-weight: 200;
 }

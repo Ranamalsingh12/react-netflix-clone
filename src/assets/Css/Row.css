@@ -1,0 +1,49 @@
+.row{
+    color: white;
+    margin-left: 10px;
+    /* margin-bottom: 4.5rem; */
+}
+
+.row_detail{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.row_detail::-webkit-scrollbar{
+    display: none;
+}
+
+.row_image{
+    object-fit: contain;
+    max-height: 160px;
+    margin-right: 10px;
+    width: 100%;
+    border-radius: 4px;
+    transition: transform 450ms;
+}
+
+.row_image:hover {
+    transform: scale(1.51,1.4);
+    background: transparent;
+    border-radius: 6px !important;
+    opacity: 1;
+}
+
+.row h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+.row_large_image{
+    max-height: 400px;
+    border-radius: 4px;
+}
+
+.row_large_image:hover{
+    transform: scale(1.1);
+    border-radius: 4px !important;
+    opacity: 1;
+}
