@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 // import ReactPlayer from 'react-player';
-import PlayBtn from '../assets/images/playbtn.svg'
+// import PlayBtn from '../assets/images/playbtn.svg'
 // import MuteBtn from '../assets/images/mute-icon.svg';
 // import UnMuteBtn from '../assets/images/unmute-icon.svg';
-import AddList from '../assets/images/add-icon.svg';
+// import AddList from '../assets/images/add-icon.svg';
 import '../assets/Css/Header.css';
 import axios from '../Api/axios';
 import requests from '../Api/Request';

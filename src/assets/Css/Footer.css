@@ -1,0 +1,10 @@
+.Main-Footer{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 2em;
+}
+
+.Main-Footer a{
+    color: red;
+}
