@@ -10,7 +10,7 @@ import requests from '../Api/Request';
 
 const Header = () => {
 
-    const [muted, setMuted] = useState(true);
+    // const [muted, setMuted] = useState(true);
 
     function truncate(string, n) {
         return string?.length > n ? string.substr(0, n-1) + '...' : string
