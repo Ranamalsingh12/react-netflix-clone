@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react'
 // import ReactPlayer from 'react-player';
-// import PlayBtn from '../assets/images/playbtn.svg'
-// import MuteBtn from '../assets/images/mute-icon.svg';
-// import UnMuteBtn from '../assets/images/unmute-icon.svg';
-// import AddList from '../assets/images/add-icon.svg';
 import '../assets/Css/Header.css';
 import axios from '../Api/axios';
 import requests from '../Api/Request';
 
-const Header = () => {
+const Header = ({closeModal}) => {
 
     // const [muted, setMuted] = useState(true);
 
@@ -34,10 +30,11 @@ const Header = () => {
 
 
   return (
-    <div className="header_main" style={{
+    <div className="header_main" onClick={() => closeModal(false)} style={{
         backgroundImage:`url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundSize:"cover",
-        backgroundPosition: "center center"
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
     }}>
         {/* <ReactPlayer
             // playing
@@ -54,30 +51,20 @@ const Header = () => {
 
       <div className="header_content">
         <h1 className='header_content_name'>{movie?.title || movie?.name || movie?.original_name}</h1>
+
+        <p className='header__container_overview'>{truncate(movie?.overview,150)}</p>
+
         <button
             onClick={() => alert('not a movie!')}
             className='header_content_PlayBtn btn-play'
         >
-            {/* <img src={PlayBtn} className='header_content_PlayBtn_btnplay' alt="" /> */}
             Play
         </button>
         <button
             className='header_content_PlayBtn'
         >
-            {/* <img src={AddList} className='header_content_PlayBtn_btnplay' alt="" /> */}
             My List
         </button>
-        <p className='header__container_overview'>{truncate(movie?.overview,150)}</p>
-            
-        {/* {muted ? (
-        <button onClick={() => setMuted(false)} className='header_content_volBtn'>
-            <img src={MuteBtn} alt="" />
-        </button>
-        ) : (
-        <button onClick={() => setMuted(true)} className='header_content_volBtn'>
-            <img src={UnMuteBtn} alt="" />
-        </button>
-        )} */}
       </div>
 
       <div className="header_content-fade"></div>

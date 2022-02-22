@@ -64,6 +64,12 @@
 }
 
 .navbar_container_links{
-    font-size: 13px;
-    font-weight: 200;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar_container_links {
+      display: none;
+    }
 }

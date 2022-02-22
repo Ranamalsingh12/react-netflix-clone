@@ -5,6 +5,8 @@ import axios from "../Api/axios";
 const Rows = ({ title, fetchUrl, bigRow = false, selectMovieHandler }) => {
   const [movies, setMovies] = useState([]);
 
+  const [hovered, setHovered] = useState(false);
+
   const base_url = "https://image.tmdb.org/t/p/original/";
 
   useEffect(() => {
@@ -13,16 +15,19 @@ const Rows = ({ title, fetchUrl, bigRow = false, selectMovieHandler }) => {
       setMovies(request.data.results);
       return request;
     }
-
     fetchData();
   }, [fetchUrl]);
+
+  const toggleHover = () => {
+    setHovered(!hovered)
+  };
 
   return (
     <>
       <div className="row">
         <h2>{title}</h2>
 
-        <div className="row_detail">
+        <div className={`row_detail `}>
           {movies.map(
             (movie) =>
               ((bigRow && movie.poster_path) ||
@@ -31,7 +36,10 @@ const Rows = ({ title, fetchUrl, bigRow = false, selectMovieHandler }) => {
                   onClick={() => {
                     selectMovieHandler(movie);
                   }}
-                  className={`row_image ${bigRow && "row_large_image"}`}
+                  
+                  onMouseEnter={toggleHover}
+                  onMouseLeave={toggleHover}
+                  className={`row_image ${hovered ? 'img_background' : ''} ${bigRow && "row_large_image"}`}
                   key={movie.id}
                   src={`${base_url}${
                     bigRow ? movie.poster_path : movie.backdrop_path

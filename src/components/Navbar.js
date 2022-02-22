@@ -3,7 +3,7 @@ import Netflix from '../assets/images/Netflix.svg';
 import SearchLogo from '../assets/images/search-icon.svg';
 import '../assets/Css/Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({closeModal}) => {
 
   const [show, setShow] = useState(false);
   
@@ -24,7 +24,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className={`navigationBar nav ${show && "nav_black"}`}>
+    <nav className={`navigationBar nav ${show && "nav_black"}`} onClick={() => closeModal(false)}>
       <div className="navbar_head_left">
           <img
               className='navigation__container__logo'

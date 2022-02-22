@@ -2,10 +2,10 @@ import React from "react";
 import "../assets/Css/Modal.css";
 
 const Modal = ({ closeModal, movieDetails }) => {
-  console.log(movieDetails);
 
   return (
     <div className="modal_background">
+      <button className='close_btn' onClick={() => closeModal(false)}> X </button>
       <div
         className="modal_container"
         style={{
@@ -14,6 +14,7 @@ const Modal = ({ closeModal, movieDetails }) => {
           }")`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "100%",
+          backgroundPosition: "right center"
         }}
       >
         <div className="container">
@@ -22,7 +23,6 @@ const Modal = ({ closeModal, movieDetails }) => {
               <h1>{movieDetails.original_title || movieDetails.name}</h1>
             </div>
             <div>
-              <button onClick={() => closeModal(false)}> X </button>
             </div>
           </div>
           <div className="rating">

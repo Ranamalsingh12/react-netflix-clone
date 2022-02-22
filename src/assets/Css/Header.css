@@ -7,28 +7,31 @@
 }
 
 .header_content{
-    margin-left: 40px;
-    padding-top: 200px;
+    margin-left: 3em;
+    padding-top: 140px;
     height: 480px;
 }
 
 .header_content_name{
-    font-size: 3rem;
-    font-weight: 800;
-    padding-bottom: .3rem;
+    font-size: 3.8rem;
+    font-weight: 900;
+    margin-bottom: 1.5em;
 }
 
 .header__container_overview{
-    width: 45rem;
-    line-height: 1.3;
-    padding-top: 1rem;
-    font-size: 0.8rem;
-    max-width: 360px;
-    height: 80px;
+    width: 50rem;
+    line-height: 1.5;
+    font-size: 1em;
+    max-width: 700px;
+    font-weight: 400;
+    margin-bottom: 2em;
 }
 
 .header_content-fade{
     height: 7.4rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-image: linear-gradient(
         180deg,
         transparent,
@@ -40,16 +43,18 @@
 .header_content_PlayBtn{
     cursor: pointer;
     color: white;
+    width: 9rem;
     outline: none;
+    font-size: 16px;
     border: none;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 0.2vw;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-right: 1rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    background-color: rgba(51, 51, 51, 0.5);
+    background-color: rgba(117, 115, 115, 0.5);
 }
 
 .btn-play{
@@ -60,4 +65,10 @@
     color: #000;
     background-color: #e6e6e6;
     transition: all 0.2s;
+}
+
+@media only screen and (max-width: 900px) {
+    .header_main {
+      height: 50vh;
+    }
 }
