@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Header from './Header';
 import Rows from './Rows';
 import requests from '../Api/Request';
-import Modal from './Modal';
 import BackDrop from "./BackDrop";
 import Footer from './Footer';
 

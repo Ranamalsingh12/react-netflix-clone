@@ -25,3 +25,4 @@ yarn-error.log*
 
 .env
 /**/conf.env.js*
+build.zip

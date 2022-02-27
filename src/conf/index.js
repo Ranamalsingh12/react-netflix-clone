@@ -1,3 +1,3 @@
 const localConf = require('./conf.env')
 
-module.exports =  { ...localConf }
+export default localConf;

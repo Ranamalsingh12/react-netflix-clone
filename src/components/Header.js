@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react'
-// import ReactPlayer from 'react-player';
 import '../assets/Css/Header.css';
 import axios from '../Api/axios';
 import requests from '../Api/Request';
 
 const Header = ({closeModal}) => {
-
-    // const [muted, setMuted] = useState(true);
 
     function truncate(string, n) {
         return string?.length > n ? string.substr(0, n-1) + '...' : string
@@ -36,19 +33,6 @@ const Header = ({closeModal}) => {
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
     }}>
-        {/* <ReactPlayer
-            // playing
-            muted
-            width='100%'
-            height='100vh'
-            className='header_video'
-            config={{ file: { attributes: {
-                autoPlay: true,
-                muted: true
-            }}}}
-            url='https://vimeo.com/384025132'
-      /> */}
-
       <div className="header_content">
         <h1 className='header_content_name'>{movie?.title || movie?.name || movie?.original_name}</h1>
 
