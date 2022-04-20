@@ -23,6 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 
-.env
-/**/conf.env.js*
 build.zip
+/**/APIKEY.js

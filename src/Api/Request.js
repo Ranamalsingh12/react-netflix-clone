@@ -1,7 +1,5 @@
-const { API_KEY } =  require("../conf");
+import {API_KEY} from '../APIKEY'
 
-// console.log(JSON.stringify(API_KEY))
-// const API_KEY = All.API_KEY
 
 const requests = {
     fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
