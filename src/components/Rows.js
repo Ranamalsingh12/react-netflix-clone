@@ -39,7 +39,7 @@ const Rows = ({ title, fetchUrl, bigRow = false, selectMovieHandler }) => {
                   
                   onMouseEnter={toggleHover}
                   onMouseLeave={toggleHover}
-                  className={`row_image ${hovered ? 'img_background' : ''} ${bigRow && "row_large_image"}`}
+                  className={`row_image ${hovered ? '' : ''} ${bigRow && "row_large_image"}`}
                   key={movie.id}
                   src={`${base_url}${
                     bigRow ? movie.poster_path : movie.backdrop_path
